@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js"></script>
+    <style>
+        *{box-sizing: border-box;}
+        body{font-family: Arial; padding: 10px; background: #222831; color: #fff; width: 1100px; margin: 0 auto; padding: 0; font-size: 16px;}
+        li{list-style-type: none;}
+        a{text-decoration: none; color: #fff;}
+        .clear{clear: both;}
+
+        /* header */
+        #header{width: 100%; height: 80px;}
+        #logo{float: left;}
+        .main{float: right; overflow:hidden; width: 50%; display: flex; justify-content: center;}
+        .main>li{float: left; text-align: center; width: 20%;}
+        .main a{line-height: 50px;}
+        .main li:hover{background: #393E46;}
+
+        .sub{height: 150px; padding: 0; z-index: 3; background: #222831; display: none; position: fixed; width: 6%;}
+        .sub li{width: 100%;}
+
+        /* article */
+        #article{display: flex; justify-content: space-between; width: 100%; height: 600px;}
+        #left{width: 50%; height: 100%; background: #DFD0B8; color: #000; padding: 20px;}
+        #right{width: 50%; height: 100%; background: #393E46;}
+
+
+
+        /* footer */
+        #footer{width: 100%; height: 100px; background: #222831; display: flex; justify-content: space-between;}
+        #icon{width: 20%; height: 100%; line-height: 100px; display: flex; justify-content: space-around;}
+        .icon1 img{width: 45%; margin-top: 10px;}
+        #copyright{width: 32%; height: 100%; line-height: 100px;}
+
+
+        /* 미디어쿼리 */
+        @media screen and (max-width:800px){
+            #left, #right{
+                width: 100%;
+                padding: 0;
+            }
+
+            #left, #right{
+                position: absolute;
+                float: none;
+                left: 0;
+                width: 100%;
+                padding: 0;
+            }
+            #left{top: 80px;}
+            #right{top: 780px;}
+
+            #footer{
+                position: absolute;
+                float: none;
+                top: 1380px;
+                left: 0;
+                width: 100%;
+                padding: 0;
+            }
+            #copyright{width: 50%;}
+        }
+
+        
+    </style>
+    
+
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <a href="./index.html"><img src="./images/logo-01.jpg"></a>
+        </div>
+        <div class="nav">
+            <ul class="main">
+            <li>
+                <a href="#">가죽</a>
+                <ul class="sub">
+                    <li><a href="#">가죽이란?</a></li>
+                    <li><a href="#">가죽의 종류</a></li>
+                    <li><a href="#">관리법</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">가죽공예</a>
+                <ul class="sub">
+                    <li><a href="#">가죽 공예란?</a></li>
+                    <li><a href="#">입문공예품</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">도구</a>
+                <ul class="sub">
+                    <li><a href="#">기본 도구</a></li>
+                    <li><a href="#">기계 도구</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">바느질</a>
+                <ul class="sub">
+                    <li><a href="#">기초 과정</a></li>
+                    <li><a href="#">문제 해결 팁</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">체험</a>
+                <ul class="sub">
+                    <li><a href="#">수업&키트</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </div>
+
+    <div id="article">
+        <div id="left">
+            <h3>가죽이란?</h3>
+            <p>가죽은 동물의 피부를 화학적으로 처리해 부패를 막고 내구성을 높인 소재입니다. 주로 소, 돼지, 양 등의 가죽이 사용되며, 내구성과 고급스러운 질감 때문에 의류, 가방, 신발, 가구 등에 널리 활용됨.</p>
+            <h4>가죽의 역사</h4>
+            <p>가죽은 선사시대부터 의복과 생활용품에 사용된 가장 오래된 소재 중 하나이다.
+            고대 이집트, 그리스, 로마 등에서도 신발, 갑옷, 문서 등에 활용되었다.
+            현대에는 가공 기술의 발달로 패션, 가구, 자동차 등 다양한 산업에 쓰인다.</p>
+            <h4>가죽의 특징</h4>
+            <p>가죽은 내구성이 뛰어나고 시간이 지날수록 자연스러운 멋이 더해지는 소재이이다. 통기성과 유연성도 좋아 착용감이 우수하며, 관리에 따라 오래 사용할 수 있다.</p>
+            <h4>가죽의 주의점</h4>
+            <p>가죽은 물과 직사광선에 약해 변색이나 경화가 발생할 수 있다. 습기와 오염에 주의하며, 정기적인 관리와 보관이 필요하다.</p>
+        </div>
+        <div id="right">
+            <ul>
+                <li>베지터블 가죽</li>
+                <li><img src="./images/베지터블.jfif" width="100%" height="130px"></li>
+                <li>푸에블로 가죽</li>
+                <li><img src="./images/푸에블로.jpg" width="100%" height="130px"></li>
+                <li>내추럴 가죽</li>
+                <li><img src="./images/내추럴.jpg" width="100%" height="100px"></li>
+                <li>크리스페 가죽</li>
+                <li><img src="./images/크리스페.jfif" width="100%" height="100px"></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="clear"></div>
+    <div id="footer">
+        <div id="icon">
+            <div class="icon1"><img src="./images/인스타그램1.png"></div>
+            <div class="icon1"><img src="./images/트위터1.png"></div>
+            <div class="icon1"><img src="./images/페이스북.png"></div>
+        </div>
+        <div id="copyright">Copyright 2025. Hanyewon. All rights reserved.</div>
+    </div>
+</body>
+</html>

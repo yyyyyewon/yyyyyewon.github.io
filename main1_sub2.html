@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js"></script>
+    <style>
+        *{box-sizing: border-box;}
+        body{font-family: Arial; padding: 10px; background: #222831; color: #fff; width: 1100px; margin: 0 auto; padding: 0; font-size: 16px;}
+        li{list-style-type: none;}
+        a{text-decoration: none; color: #fff;}
+        .clear{clear: both;}
+
+        /* header */
+        #header{width: 100%; height: 80px;}
+        #logo{float: left;}
+        .main{float: right; overflow:hidden; width: 50%; display: flex; justify-content: center;}
+        .main>li{float: left; text-align: center; width: 20%;}
+        .main a{line-height: 50px;}
+        .main li:hover{background: #393E46;}
+
+        .sub{height: 150px; padding: 0; z-index: 3; background: #222831; display: none; position: fixed; width: 6%;}
+        .sub li{width: 100%;}
+
+        /* article */
+        #article{display: flex; justify-content: space-between; width: 100%; height: 600px;}
+        #left{width: 50%; height: 100%; background: #DFD0B8; color: #000; padding: 20px;}
+        #right{width: 50%; height: 100%; background: #393E46;}
+
+
+
+        /* footer */
+        #footer{width: 100%; height: 100px; background: #222831; display: flex; justify-content: space-between;}
+        #icon{width: 20%; height: 100%; line-height: 100px; display: flex; justify-content: space-around;}
+        .icon1 img{width: 45%; margin-top: 10px;}
+        #copyright{width: 32%; height: 100%; line-height: 100px;}
+
+
+        /* 미디어쿼리 */
+        @media screen and (max-width:800px){
+            #left, #right{
+                width: 100%;
+                padding: 0;
+            }
+
+            #left, #right{
+                position: absolute;
+                float: none;
+                left: 0;
+                width: 100%;
+                padding: 0;
+            }
+            #left{top: 80px;}
+            #right{top: 780px;}
+
+            #footer{
+                position: absolute;
+                float: none;
+                top: 1380px;
+                left: 0;
+                width: 100%;
+                padding: 0;
+            }
+            #copyright{width: 50%;}
+        }
+
+        
+    </style>
+    
+
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <a href="./index.html"><img src="./images/logo-01.jpg"></a>
+        </div>
+        <div class="nav">
+            <ul class="main">
+            <li>
+                <a href="#">가죽</a>
+                <ul class="sub">
+                    <li><a href="#">가죽이란?</a></li>
+                    <li><a href="#">가죽의 종류</a></li>
+                    <li><a href="#">관리법</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">가죽공예</a>
+                <ul class="sub">
+                    <li><a href="#">가죽 공예란?</a></li>
+                    <li><a href="#">입문공예품</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">도구</a>
+                <ul class="sub">
+                    <li><a href="#">기본 도구</a></li>
+                    <li><a href="#">기계 도구</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">바느질</a>
+                <ul class="sub">
+                    <li><a href="#">기초 과정</a></li>
+                    <li><a href="#">문제 해결 팁</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">체험</a>
+                <ul class="sub">
+                    <li><a href="#">수업&키트</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </div>
+
+    <div id="article">
+        <div id="left">
+            <h3>가죽이란?</h3>
+            
+        </div>
+        <div id="right">
+            <ul>
+                <li>베지터블 가죽</li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="clear"></div>
+    <div id="footer">
+        <div id="icon">
+            <div class="icon1"><img src="./images/인스타그램1.png"></div>
+            <div class="icon1"><img src="./images/트위터1.png"></div>
+            <div class="icon1"><img src="./images/페이스북.png"></div>
+        </div>
+        <div id="copyright">Copyright 2025. Hanyewon. All rights reserved.</div>
+    </div>
+</body>
+</html>

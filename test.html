@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #banner {
+      position: relative;
+      width: 800px;  /* 너가 원하는 배너 크기 */
+      height: 400px;
+      overflow: hidden;
+      margin: 50px auto;
+    }
+
+    #banner_img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    #banner_img img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      z-index: 0;
+    }
+
+    #banner_img img.active {
+      opacity: 1;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+    <div id="banner">
+    <div id="banner_img">
+      <img src="./images/banner-1.jpg" alt="배너1">
+      <img src="./images/banner-2.jpg" alt="배너2">
+      <img src="./images/banner-3.jpg" alt="배너3">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = document.querySelectorAll("#banner_img img");
+      let index = 0;
+
+      // 첫 번째 이미지를 보이게
+      images[index].classList.add("active");
+
+      setInterval(() => {
+        images[index].classList.remove("active");
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
